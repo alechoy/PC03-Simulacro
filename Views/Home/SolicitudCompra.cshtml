@@ -1,0 +1,66 @@
+@model SolicitudCompra
+@{
+    ViewData["Title"] = "";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h1>Formulario de Compra</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NombreProducto"></label>
+        <input asp-for="NombreProducto" class="form-control">
+        <span asp-validation-summary="NombreProducto" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Foto"></label>
+        <input asp-for="Foto" class="form-control">
+        <span asp-validation-summary="Foto" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control">
+        <span asp-validation-summary="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control">
+        <span asp-validation-summary="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Celular"></label>
+        <input asp-for="Celular" class="form-control">
+        <span asp-validation-summary="Celular" class="text-danger"></span>
+        
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LugarCompra"></label>
+        <input asp-for="LugarCompra" class="form-control">
+        <span asp-validation-summary="LugarCompra" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NombreComprador"></label>
+        <input asp-for="NombreComprador" class="form-control">
+        <span asp-validation-summary="NombreComprador" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Categoria"></label>
+        <select name="Categoria" id="" class="form-control">
+                <option value="Tecnología">Tecnología</option>
+                <option value="Arte">Arte</option>
+                <option value="Ropa">Ropa</option>
+                <option value="Muebles del Hogar">Muebles del Hogar</option>
+        </select>
+        <span asp-validation-summary="Categoria" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-primary">Registrar Solicitud</button>
+
+</form>
