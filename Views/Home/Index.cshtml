@@ -3,6 +3,9 @@
     ViewData["Title"] = "Home Page";
 }
 
+<body class="bg-success">
+
+
 <div class="text-center">
     <h1 class="display-4">Lista de Solicitudes</h1>
 
@@ -11,13 +14,13 @@
       <p>Aún no se registran solicitudes</p>  
     }
 
+    
 <div class="row mt-5">
         @foreach (var compra in Model)
         {
             <div class="card col-4" style="width: 18rem">
             <img src="@compra.Foto" class="card-img-top" >
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
                    <p>
                         Nombre del Producto: @compra.NombreProducto <br>
                         Descripcion: @compra.Descripcion <br>
@@ -26,9 +29,13 @@
                         Lugar: @compra.LugarCompra<br>
                         Comprador: @compra.NombreComprador<br>
                         Categoria: @compra.Categoria <br>
+                        Fecha: @compra.Fecha <br>
+                        
                     </p>
                 </div>
                 
             </div>
         }
 </div>
+    
+</body>

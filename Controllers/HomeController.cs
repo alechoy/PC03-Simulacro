@@ -24,6 +24,7 @@ namespace PC03_Simulacro.Controllers
         public IActionResult Index()
         {
             var solicitudes = _context.SolicitudesCompra.ToList();
+            
             return View(solicitudes);
         }
 
@@ -35,6 +36,7 @@ namespace PC03_Simulacro.Controllers
         [HttpPost]
         public IActionResult SolicitudCompra(SolicitudCompra sc)
         {
+            
             if(ModelState.IsValid){
                 _context.Add(sc);
                 _context.SaveChanges();
@@ -42,6 +44,9 @@ namespace PC03_Simulacro.Controllers
             }
             return View();
         }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -26,6 +26,13 @@ namespace PC03_Simulacro.Models
         public string NombreComprador{get;set;}
          [Required]
         public string Categoria{get;set;}
-        
+        public DateTime Fecha{get;set;}
+        public SolicitudCompra(){
+            DateTime limitDate = DateTime.Today.AddDays(-5);
+            Fecha = limitDate;       
+            var Dia = Fecha.Day;
+            var Mes = Fecha.Month;
+            var Año = Fecha.Year;
+        }
     }
 }
